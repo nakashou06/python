@@ -5,6 +5,9 @@ app = Flask(__name__)
 def hello():
     return "HEEEEEY,Hello, World!"
 
+def index():
+    return render_template(‘index.html’)
+
 #20210414
 #kdbもどきもどき
 #from flask import Flask, render_template, request, jsonify #追加
