@@ -1,22 +1,29 @@
-#20210414
-#kdb‚à‚Ç‚«‚à‚Ç‚«
-from flask import Flask, render_template, request, jsonify #’Ç‰Á
-
+from flask import Flask
 app = Flask(__name__)
-app.config['JSON_AS_ASCII'] = False #“ú–{Œê•¶š‰»‚¯‘Îô
-app.config["JSON_SORT_KEYS"] = False #ƒ\[ƒg‚ğ‚»‚Ì‚Ü‚Ü
 
-@app.route('/hello')
+@app.route("/")
 def hello():
-    data = [
-        {"name":"R“c"},
-        {"age":30}
-    ]
-    return jsonify({
-            'status':'OK',
-            'data':data
-        })
+    return "Hello, World!"
 
-## ‚¨‚Ü‚¶‚È‚¢
-if __name__ == "__main__":
-    app.run(debug=True)
+#20210414
+#kdbã‚‚ã©ãã‚‚ã©ã
+#from flask import Flask, render_template, request, jsonify #è¿½åŠ 
+
+#app = Flask(__name__)
+#app.config['JSON_AS_ASCII'] = False #æ—¥æœ¬èªæ–‡å­—åŒ–ã‘å¯¾ç­–
+#app.config["JSON_SORT_KEYS"] = False #ã‚½ãƒ¼ãƒˆã‚’ãã®ã¾ã¾
+
+#@app.route('/hello')
+#def hello():
+#    data = [
+#        {"name":"å±±ç”°"},
+#        {"age":30}
+#    ]
+#    return jsonify({
+#            'status':'OK',
+#            'data':data
+#        })
+
+## ãŠã¾ã˜ãªã„
+#if __name__ == "__main__":
+#    app.run(debug=True)
